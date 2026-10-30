@@ -29,12 +29,12 @@ The reminder contains its date and a journal link. Opening the link changes noth
 
 The local project is linked to https://github.com/robinrobinrobin161/Habit-Tracker. Push these files to its `main` branch, then select **GitHub Actions** under Settings → Pages. GitHub authentication is required to upload the files.
 
-In Settings → Secrets and variables → Actions add these **variables**:
+The Pages workflow already includes this tracker’s public Supabase URL and publishable key. You do not need to enter them again. In Settings → Secrets and variables → Actions, add `SITE_URL` for reminders; the other two variables below are optional overrides:
 
 | Variable | Value |
 | --- | --- |
-| `VITE_SUPABASE_URL` | Supabase project URL |
-| `VITE_SUPABASE_ANON_KEY` | Public anon or publishable key |
+| `VITE_SUPABASE_URL` | Optional override for the configured Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Optional override for the configured public publishable key |
 | `SITE_URL` | Full HTTPS Pages address, e.g. `https://USERNAME.github.io/Habit-Tracker/` |
 
 Add these **secrets**:
